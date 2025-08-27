@@ -30,7 +30,7 @@ func New(opts Options) (*Server, error) {
 		IdleTimeout:  opts.IdleTimeout,
 	}
 
-	ln, err := net.Listen("TCP", opts.Addr)
+	ln, err := net.Listen("tcp", opts.Addr)
 	if err != nil {
 		return nil, err
 	}

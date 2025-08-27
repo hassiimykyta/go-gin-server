@@ -59,7 +59,7 @@ func (c *Config) Validate() error {
 	}
 
 	switch c.DB.Driver {
-	case "postgres", "mysql":
+	case "postgres", "mysql", "pgx":
 	default:
 		return fmt.Errorf("unsupported DB_DRIVER %v", c.DB.Driver)
 	}
